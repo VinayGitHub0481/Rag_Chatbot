@@ -48,7 +48,7 @@ def retrieve_info(user_query:str):
    
     #here we are performing reranking using CrossEncoder model
 
-    obtained_data=[(user_query,data.page_content) for data in data_search] #for each chunk we are checking with the user_query
+    obtained_data=[(user_query,data.page_content) for data in data_search] #we get list of chunks as result by similarity_search with the user_query
 
     scores=encoder_llm.predict(obtained_data)  #here we obtaining revised scores to the output chunks
 
@@ -66,7 +66,7 @@ def retrieve_info(user_query:str):
     SYSTEM_PROMPT=f"""
     Hey AI assistant you should help me to get the context based on the above user query
 
-    Note: you should give response ONLY and ONLY through the given context 
+    Note: you should give output response ONLY and ONLY from the  context 
 
     Context:
     {context}
