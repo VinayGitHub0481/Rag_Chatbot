@@ -1,0 +1,18 @@
+#environment
+.env
+app/.env
+
+#python cache
+__pycache__/
+*.pyc
+
+# temp files 
+temp_files/
+app/temp_files/
+
+#virutal env
+venv/
+
+
+
+
