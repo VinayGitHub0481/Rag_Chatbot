@@ -1,5 +1,5 @@
 
-#here the input pdf or doc file will gets here and stored in the db 
+#here the input pdf file will gets to the worker function
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -22,7 +22,6 @@ embedded_model=OpenAIEmbeddings(
 
 
 def loading_file(content:bytes,filename:str) :
-     print(loading_file.__module__)
      try:
         
         filename=f"{uuid.uuid4()}.pdf"  #here by this for each pdf upload new unique id will be generated 
